@@ -1,26 +1,38 @@
 
+<<<<<<< Updated upstream
 #include "Inclusions.hpp"
+=======
+#include "Controller/Game.cpp"
+
+#include "Controller/Manager/GameObjectManager.cpp"
+#include "Controller/Manager/TextureManager.cpp"
+#include "Controller/Manager/SceneManager.cpp"
+
+#include "Model/GameObject.cpp"
+#include "Model/AnimatedTexture.cpp"
+#include "Model/Scene.cpp"
+
+#include "Model/Entity/Player.cpp"
+#include "Model/Entity/Background.cpp"
+
+#include "Model/Component/Component.cpp"
+#include "Model/Component/GeneralInput.cpp"
+
+#include "Model/Component/Input/PlayerInput.cpp"
+
+#include "Model/Component/Script/PlayerMovement.cpp"
+//#include "Model/Component/Script/BackgroundAction.cpp"
+
+#include "Model/Component/Renderer/Renderer.cpp"
+
+
+
+using namespace controllers;
+>>>>>>> Stashed changes
 
 int main() {
-   sf::RenderWindow window(sf::VideoMode(200, 200), "SFML Start-Up");
-   sf::CircleShape shape(100.f);
-   shape.setFillColor(sf::Color::Green);
-
-   controllers::Game();
-   managers::TextureManager::getInstance()->test();
-   models::GameObject();
-
-   while (window.isOpen()) {
-      sf::Event event;
-      while (window.pollEvent(event)) {
-         if (event.type == sf::Event::Closed)
-            window.close();
-      }
-
-      window.clear();
-      window.draw(shape);
-      window.display();
-   }
+   Game CGame;
+   CGame.run();
 
    return 0;
 }
