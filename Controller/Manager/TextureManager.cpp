@@ -20,14 +20,30 @@ void TextureManager::loadAll() {
 
 void TextureManager::loadMainMenu(){
     sf::Texture* pTexture = new sf::Texture();
-    pTexture->loadFromFile("View/Image/main_menu_background.png");
+    pTexture->loadFromFile("View/Image/Main Menu/main_menu_background.png");
     this->mapTexture[AssetType::MAIN_MENU_BACKGROUND].push_back(pTexture);
+
+    pTexture = new sf::Texture();
+    pTexture->loadFromFile("View/Image/Main Menu/main_menu_play_button.png");
+    this->mapTexture[AssetType::MAIN_MENU_PLAY_BUTTON].push_back(pTexture);
+
+    pTexture = new sf::Texture();
+    pTexture->loadFromFile("View/Image/Main Menu/main_menu_leaderboard_button.png");
+    this->mapTexture[AssetType::MAIN_MENU_LEADERBOARD_BUTTON].push_back(pTexture);
+
+    pTexture = new sf::Texture();
+    pTexture->loadFromFile("View/Image/Main Menu/main_menu_exit_button.png");
+    this->mapTexture[AssetType::MAIN_MENU_EXIT_BUTTON].push_back(pTexture);
 }
 
 void TextureManager::loadGame(){
     sf::Texture* pTexture = new sf::Texture();
     pTexture->loadFromFile("View/Image/Space Impact/game_background.png");
     this->mapTexture[AssetType::GAME_BACKGROUND].push_back(pTexture);
+
+    pTexture = new sf::Texture();
+    pTexture->loadFromFile("View/Image/Space Impact/Player/this_ship_be_otp.png");
+    this->mapTexture[AssetType::PLAYER].push_back(pTexture);
 }
 
 void TextureManager::clearAll(){

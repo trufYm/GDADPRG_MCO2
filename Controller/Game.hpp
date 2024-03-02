@@ -6,12 +6,15 @@
 #include "Manager/GameObjectManager.hpp"
 #include "../Model/AnimatedTexture.hpp"
 #include "Manager/SceneManager.hpp"
-#include "../Model/Entity/Background.hpp"
+#include "../Model/Scene/MainMenuScene.hpp"
+#include "../Model/Scene/GameScene.hpp"
+#include "../Model/Enum/SceneTag.hpp"
 
 namespace controllers {
     using namespace entities;
     using namespace managers;
     using namespace models;
+    using namespace scenes;
     class Game {
         //Fields
         private:

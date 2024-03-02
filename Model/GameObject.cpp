@@ -70,6 +70,10 @@ void GameObject::setFrame(int nFrame){
     }
 }
 
+float GameObject::getSpeed() {
+    return this->fSpeed;
+}
+
 void GameObject::attachComponent(Component* pComponent){
     this->vecComponents.push_back(pComponent);
     pComponent->attachOwner(this);

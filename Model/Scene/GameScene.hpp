@@ -2,17 +2,18 @@
 
 #include "../Scene.hpp"
 #include "../Enum/SceneTag.hpp"
+#include "../Enum/AssetType.hpp"
 #include "../AnimatedTexture.hpp"
 #include "../Entity/Background.hpp"
 #include "../Entity/Player.hpp"
-#include "../Entity/Button.hpp"
+#include "../../Controller/Manager/TextureManager.hpp"
 
 namespace scenes {
     using namespace models;
     using namespace entities;
-    class MainMenuScene : public Scene {
+    class GameScene : public Scene {
         public:
-            MainMenuScene();
+            GameScene();
 
         public:
             void onLoadResources();
@@ -21,6 +22,5 @@ namespace scenes {
         
         private:
             void createBackground();
-            void createButtons();
     };
 }

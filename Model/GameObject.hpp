@@ -15,6 +15,7 @@ namespace models {
             sf::Sprite* pSprite;
             sf::Texture* pTexture;
             AnimatedTexture* pAnimatedTexture;
+            float fSpeed;
             std::vector<Component*> vecComponents;
 
         public:
@@ -33,13 +34,10 @@ namespace models {
             sf::Sprite* getSprite();
             void setTexture(sf::Texture* pTexture);
             void setFrame(int nFrame);
+            float getSpeed();
             void attachComponent(Component* pComponent);
             void detachComponent(Component* pComponent);
             Component* findComponentByName(std::string strName);
             std::vector<Component*> getComponents(ComponentType EType);
     };
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
