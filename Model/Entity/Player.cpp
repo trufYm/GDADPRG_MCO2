@@ -12,6 +12,7 @@ Player::Player(std::string strName, AnimatedTexture* pTexture) : GameObject(strN
 
 void Player::initialize(){
     this->pSprite->setPosition(100.0f, 100.0f);
+    this->pSprite->setScale(0.75f, 0.75f);
 
     PlayerInput* pPlayerInput = new PlayerInput(this->strName + " Input");
     this->attachComponent(pPlayerInput);

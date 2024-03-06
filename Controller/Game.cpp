@@ -4,12 +4,7 @@ using namespace controllers;
 
 //Constructors
 Game::Game() : CWindow(sf::VideoMode(1280, 720), "LETHAL COMPANY"){
-    //TextureManager::getInstance()->loadAll();
-    //AnimatedTexture* pTexture = new AnimatedTexture(TextureManager::getInstance()->getTexture(AssetType::PLAYER));
-    //Player* pEntity = new Player("Player", pTexture);
-    //GameObjectManager::getInstance()->addObject(pEntity);
-    
-    SceneManager::getInstance()->registerScene(new MainMenuScene());
+    SceneManager::getInstance()->registerScene(new MainMenuScene(&this->CWindow));
     SceneManager::getInstance()->registerScene(new GameScene());
     SceneManager::getInstance()->loadScene(SceneTag::MAIN_MENU_SCENE);
 }

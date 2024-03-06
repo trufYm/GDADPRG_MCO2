@@ -35,6 +35,7 @@ namespace models {
             void setTexture(sf::Texture* pTexture);
             void setFrame(int nFrame);
             float getSpeed();
+            void flipSprite();
             void attachComponent(Component* pComponent);
             void detachComponent(Component* pComponent);
             Component* findComponentByName(std::string strName);

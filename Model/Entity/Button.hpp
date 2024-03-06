@@ -13,9 +13,11 @@ namespace entities {
     class Button : public GameObject {
         private:
             AssetType ETag;
+            sf::RenderWindow* pWindow;
 
         public:
             Button(std::string strName, AnimatedTexture* pTexture, AssetType ETag);
+            Button(std::string strName, AnimatedTexture* pTexture, AssetType ETag, sf::RenderWindow* pWindow);
         
         public:
             void initialize();

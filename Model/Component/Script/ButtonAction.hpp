@@ -13,9 +13,11 @@ namespace components {
     class ButtonAction : public Component {
         private:
             AssetType ETag;
+            sf::RenderWindow* pWindow;
             
         public:
             ButtonAction(std::string strName, AssetType ETag);
+            ButtonAction(std::string strName, AssetType ETag, sf::RenderWindow* pWindow);
 
         public:
             void perform();

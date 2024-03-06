@@ -4,6 +4,12 @@ using namespace entities;
 
 Button::Button(std::string strName, AnimatedTexture* pTexture, AssetType ETag) : GameObject(strName, pTexture){
     this->ETag = ETag;
+    this->pWindow = NULL;
+}
+
+Button::Button(std::string strName, AnimatedTexture* pTexture, AssetType ETag, sf::RenderWindow* pWindow) : GameObject(strName, pTexture){
+    this->ETag = ETag;
+    this->pWindow = pWindow;
 }
         
 void Button::initialize(){
@@ -23,9 +29,15 @@ void Button::initialize(){
     ButtonInput* pButtonInput = new ButtonInput(this->strName + " Input");
     this->attachComponent(pButtonInput);
 
-    ButtonAction* pButtonAction = new ButtonAction(this->strName + " Action", ETag);
-    this->attachComponent(pButtonAction);
-
+    if(pWindow != NULL){
+        ButtonAction* pButtonAction = new ButtonAction(this->strName + " Action", ETag, this->pWindow);
+        this->attachComponent(pButtonAction);
+    }
+    else{
+        ButtonAction* pButtonAction = new ButtonAction(this->strName + " Action", ETag);
+        this->attachComponent(pButtonAction);
+    }
+    
     Renderer* pRenderer = new Renderer(this->strName + " Renderer");
     pRenderer->assignDrawable(this->pSprite);
     this->attachComponent(pRenderer);

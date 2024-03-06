@@ -2,8 +2,8 @@
 
 using namespace scenes;
 
-MainMenuScene::MainMenuScene() : Scene(SceneTag::MAIN_MENU_SCENE){
-
+MainMenuScene::MainMenuScene(sf::RenderWindow* pWindow) : Scene(SceneTag::MAIN_MENU_SCENE){
+    this->pWindow = pWindow;
 }
 
 void MainMenuScene::onLoadResources(){
@@ -35,6 +35,6 @@ void MainMenuScene::createButtons(){
     this->registerObject(pLeaderboardButton);
 
     pTexture = new AnimatedTexture(TextureManager::getInstance()->getTexture(AssetType::MAIN_MENU_EXIT_BUTTON));
-    Button* pExitButton = new Button("ExitButton", pTexture, AssetType::MAIN_MENU_EXIT_BUTTON);
+    Button* pExitButton = new Button("ExitButton", pTexture, AssetType::MAIN_MENU_EXIT_BUTTON, pWindow);
     this->registerObject(pExitButton);
 }

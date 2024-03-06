@@ -74,6 +74,15 @@ float GameObject::getSpeed() {
     return this->fSpeed;
 }
 
+void GameObject::flipSprite() {
+    std::vector<Component*> vecRenderers = this->getComponents(ComponentType::RENDERER);
+
+    for(Component* pComponent : vecRenderers) {
+        Renderer* pRenderer = (Renderer*)pComponent;
+        pRenderer->flip();
+    }
+}
+
 void GameObject::attachComponent(Component* pComponent){
     this->vecComponents.push_back(pComponent);
     pComponent->attachOwner(this);

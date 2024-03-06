@@ -13,8 +13,11 @@ namespace scenes {
     using namespace models;
     using namespace entities;
     class MainMenuScene : public Scene {
+        private:
+            sf::RenderWindow* pWindow;
+
         public:
-            MainMenuScene();
+            MainMenuScene(sf::RenderWindow* pWindow);
 
         public:
             void onLoadResources();

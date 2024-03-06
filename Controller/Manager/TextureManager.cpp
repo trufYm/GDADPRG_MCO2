@@ -33,11 +33,11 @@ void TextureManager::loadMainMenu(){
 
 void TextureManager::loadGame(){
     sf::Texture* pTexture = new sf::Texture();
-    pTexture->loadFromFile("View/Image/Space Impact/game_background.png");
+    pTexture->loadFromFile("View/Image/ship.png");
     this->mapTexture[AssetType::GAME_BACKGROUND].push_back(pTexture);
 
     pTexture = new sf::Texture();
-    pTexture->loadFromFile("View/Image/Space Impact/Player/this_ship_be_otp.png");
+    pTexture->loadFromFile("View/Image/player_sprite.png");
     this->mapTexture[AssetType::PLAYER].push_back(pTexture);
 }
 
