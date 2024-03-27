@@ -28,6 +28,7 @@ enum class AssetType : int {
     LEVEL_ITEM,
     LEVEL_SCRAP,
     LEVEL_TILE,
+    LEVEL_TILE_BLOCKED,
     LEVEL_SNARE_FLEA,
     LEVEL_THUMPER,
     LEVEL_COIL_HEAD,

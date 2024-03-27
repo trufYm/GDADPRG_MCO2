@@ -73,12 +73,12 @@ void TextureManager::loadShip(){
 
 void TextureManager::loadLevel(){
     sf::Texture* pTexture = new sf::Texture();
-    pTexture->loadFromFile("View/Image/...");
-    // this->mapTexture[AssetType::...].push_back(pTexture);
+    pTexture->loadFromFile("View/Image/tile.png");
+    this->mapTexture[AssetType::LEVEL_TILE].push_back(pTexture);
 
     pTexture = new sf::Texture();
-    pTexture->loadFromFile("View/Image/...");
-    // this->mapTexture[AssetType::...].push_back(pTexture);
+    pTexture->loadFromFile("View/Image/tile_blocked.png");
+    this->mapTexture[AssetType::LEVEL_TILE_BLOCKED].push_back(pTexture);
 }
 
 void TextureManager::loadLeaderboard(){
